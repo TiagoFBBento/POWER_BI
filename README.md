@@ -1,2 +1,10 @@
-# powerbi-data-analytics
-Power BI analytics projects focused on business performance, profitability and decision support.
+## Power BI Portfolio
+
+This repository contains Power BI projects focused on:
+- Business performance
+- Sales & profitability analysis
+- Decision support dashboards
+
+### Projects
+- **Pharmacy Sales & Profitability Analytics**  
+  European pharmacy distributor analytics challenge.
