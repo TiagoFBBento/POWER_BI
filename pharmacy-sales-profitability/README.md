@@ -1,71 +1,65 @@
-# 📊 Pharmacy Sales & Profitability Analytics  
-**ZoomCharts / Onyx Data Challenge**
+# Pharmacy Sales & Profitability Analytics  
+📊 Power BI Analytics Project
+
+This project is developed in response to a **Pharmacy Sales & Profitability Analytics Data Challenge**, based on a European pharmacy distributor operating across multiple countries.
+
+The objective is to build a Power BI report that enables stakeholders to understand **sales performance, profitability drivers, and geographic contributions** at multiple levels of detail.
+
+> 🔧 **Project status**:  
+> - Dashboard 1 (Business Performance Overview): ✅  
+> - Dashboard 2 (Product Performance): 🚧 
+> - Dashboard 3 (Pharmacy & Regional Insights): 🚧 
 
 ---
 
-## 🔗 Dashboard Link  
-*https://app.powerbi.com/groups/me/reports/d8900818-4ecb-41ab-bedd-a41d295df22b/85b6072dc8a26c18c548?experience=power-bi*
+## 🎯 Challenge Objective
+
+The goal of this project is to help stakeholders answer key business questions such as:
+
+- How do **revenue, units sold, and margin** evolve over time?
+- Which **countries and regions** contribute most to total revenue and margin?
+- How does performance change when drilling down from **country → region → pharmacy**?
+- How does **sales volume (units)** compare to **profitability (margin)** across markets?
+- How do different **pharmacy types** and **products** impact overall performance?
+
+The dashboards are designed to support **executive decision-making**, combining high-level KPIs with interactive drill-down analysis.
 
 ---
 
-## 🎯 Objective  
-To analyze sales and profitability performance of a European pharmacy chain distributor, identifying key geographic, temporal, and product-level drivers of revenue, volume, and margin.
+## 🗂️ Dataset Overview
 
-The report aims to support strategic decision-making by highlighting:
-- Regional contributions to overall business results
-- Performance differences across pharmacies
-- Product-level profitability and volume patterns
-
----
-
-## 📂 Dataset Overview  
-The dataset represents **daily sales transactions** across multiple European countries.
+The data model follows a **star schema**, optimized for analytical performance and scalability.
 
 ### Fact Table
-**FactSales**
-- Revenue (€)
-- Units Sold
-- Cost (€)
-- Margin (€)
-- Promotion Flag
-- DateKey
-- PharmacyID
-- ProductID
+- **FactSales** – daily sales transactions by pharmacy and product
 
 ### Dimension Tables
-**DimDate**
-- Date
-- Month
-- Year
-- YearMonth
-- Quarter
+- **DimDate** – date, month, quarter, year
+- **DimPharmacy** – country, region, city, pharmacy type
+- **DimProduct** – product attributes
 
-**DimPharmacy**
-- Country
-- Region
-- City
-- Pharmacy Type (Urban / Suburban / Rural)
-- Store Size
-
-**DimProduct**
-- Product Name
-- Category
-- Brand
-- Pack Size
-- Generic Flag
+*# inserir imagem do modelo de dados*
 
 ---
 
-## 📏 Key DAX Measures
-- Total Revenue (€)
-- Total Units Sold
-- Total Margin (€)
-- Revenue MoM %
-- Units Sold MoM %
-- Margin MoM %
-- Cost (€)
+## 📏 DAX Measures
 
-Measures are grouped by domain (Revenue, Units, Margin) for clarity and scalability.
+Measures are grouped by analytical domain for clarity and maintainability.
+
+### Revenue
+- Revenue (€)
+- Revenue MoM
+- Revenue MoM %
+
+### Units
+- Units Sold
+- Units Sold MoM
+- Units Sold MoM %
+
+### Margin
+- Margin (€)
+- Margin MoM
+- Margin MoM %
 
 ---
 
@@ -73,80 +67,75 @@ Measures are grouped by domain (Revenue, Units, Margin) for clarity and scalabil
 
 ### 📝 Page 1: Business Performance Overview
 
+This dashboard provides an **executive-level overview** of overall business performance.
+
 #### KPIs
 - **Revenue (€)** – total revenue with monthly sparkline
 - **Units Sold** – total units sold with monthly sparkline
 - **Margin (€)** – total margin with monthly sparkline
 
-#### Insights
-1. **Countries with the Highest Units Sold**
-   - Identifies markets with the largest sales volume
-   - Highlights demand distribution independent of pricing
+Sparklines are used to convey trend direction without duplicating detailed time-series visuals.
 
-2. **Countries and Regions Contributing Most to Revenue and Margin**
-   - Comparison of absolute revenue and profitability
-   - Drill-down from country to region
+#### Key Insights
 
-3. **Interactive Filters**
-   - Year
-   - Pharmacy Type
-   - Product Name
+**Countries with the Highest Units Sold**
+- Identifies markets with the largest sales volume
+- Highlights demand distribution independently of pricing or margin
 
-This page provides an executive-level snapshot of overall business performance.
+**Countries and Regions Contributing Most to Revenue and Margin**
+- Compares absolute revenue versus profitability
+- Enables drill-down from country to region
+- Supports identification of high-revenue but low-margin markets
 
----
+#### Interactive Filters
+- Year
+- Pharmacy Type
+- Product Name
 
-### 📝 Page 2: Time & Regional Performance
-
-#### Insights
-1. **Revenue, Units Sold, and Margin Over Time**
-   - Monthly trends
-   - Identification of seasonal patterns
-
-2. **Country → Region → Pharmacy Analysis**
-   - Performance comparison within regions
-   - Identification of outperforming and underperforming pharmacies
-
-3. **Pharmacy Type Performance**
-   - Comparison between Urban, Suburban, and Rural pharmacies
-   - Analysis of volume and profitability differences
-
-This page focuses on **trend analysis and geographic performance consistency**.
+This page answers the briefing questions related to:
+- Overall performance trends
+- Country-level contribution
+- Volume vs. profitability comparison
 
 ---
 
-### 📝 Page 3: Product & Promotion Analysis
+### 📝 Page 2: Product Performance (Planned)
 
-#### Insights
-1. **Top Product Categories and Brands**
-   - By revenue
-   - By margin
-
-2. **Volume vs Margin Trade-Off**
-   - High-volume, low-margin products
-   - Low-volume, high-margin products
-
-3. **Promoted vs Non-Promoted Sales**
-   - Comparison of units sold and margin
-   - Evaluation of promotion effectiveness
-
-This page supports **product strategy and promotional decision-making**.
+This dashboard will focus on:
+- Performance by **product category and brand**
+- Comparison between **high-volume vs. high-margin products**
+- Identification of products that may require pricing or promotion review
 
 ---
 
-## 🗺️ Geographic Analysis
-- Interactive geographic visuals reveal spatial patterns in sales and profitability
-- Enables quick identification of strong and weak regions
+### 📝 Page 3: Pharmacy & Regional Insights (Planned)
+
+This dashboard will focus on:
+- Performance at **pharmacy level**
+- Comparison between pharmacies within the same region
+- Differences across **Urban, Suburban, and Rural** pharmacy types
+- Geographic patterns in sales and profitability
 
 ---
 
-## 🧠 Design & Methodology Notes
-- Clear separation between overview, trend analysis, and product insights
-- Minimal visual redundancy to reduce cognitive load
-- Interactivity used only where it adds analytical value
-- Layout designed for both executive and analytical audiences
+## 🧠 Design Principles
+
+- Clear separation between **overview and deep-dive analysis**
+- Avoidance of redundant visuals
+- Drill-down used instead of overcrowded charts
+- Focus on business questions defined in the original briefing
 
 ---
 
-## 📬 Author  
-*(Name / LinkedIn link to be added)*
+## 🚀 Tools & Technologies
+
+- Power BI Desktop
+- DAX
+- Star schema data modeling
+- Interactive and drill-down visuals
+
+---
+
+## 📌 Notes
+
+This project is part of a **Power BI analytics portfolio**, demonstrating the ability to translate a business briefing into a structured, scalable, and decision-oriented dashboard solution.
