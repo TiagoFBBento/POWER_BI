@@ -4,7 +4,7 @@
 ---
 
 ## 🔗 Dashboard Link  
-*(to be added)*
+*https://app.powerbi.com/groups/me/reports/d8900818-4ecb-41ab-bedd-a41d295df22b/85b6072dc8a26c18c548?experience=power-bi*
 
 ---
 
