@@ -1,141 +1,178 @@
 # Pharmacy Sales & Profitability Analytics  
-📊 Power BI Analytics Project
+📊 Power BI Portfolio Project
 
-This project is developed in response to a **Pharmacy Sales & Profitability Analytics Data Challenge**, based on a European pharmacy distributor operating across multiple countries.
+This project is part of my **data analytics portfolio** and was developed using **Power BI** in response to a *Pharmacy Sales & Profitability Analytics Data Challenge*.
 
-The objective is to build a Power BI report that enables stakeholders to understand **sales performance, profitability drivers, and geographic contributions** at multiple levels of detail.
-
-> 🔧 **Project status**:  
-> - Dashboard 1 (Business Performance Overview): ✅  
-> - Dashboard 2 (Product Performance): 🚧 
-> - Dashboard 3 (Pharmacy & Regional Insights): 🚧 
+The dataset represents a **European pharmacy distributor operating across multiple countries**, with daily sales transactions by pharmacy and product.  
+The goal of the project is to demonstrate how data can be transformed into **clear, actionable insights** that support business decision-making — even for users without a technical or analytics background.
 
 ---
 
-## 🎯 Challenge Objective
+## 🧩 Stakeholder Questions (From the Original Briefing)
 
-The goal of this project is to help stakeholders answer key business questions such as:
+The dashboards were designed to answer a specific set of **business questions defined in the original challenge briefing**.  
+These questions reflect the type of information stakeholders typically need to make informed decisions.
 
-- How do **revenue, units sold, and margin** evolve over time?
-- Which **countries and regions** contribute most to total revenue and margin?
-- How does performance change when drilling down from **country → region → pharmacy**?
-- How does **sales volume (units)** compare to **profitability (margin)** across markets?
-- How do different **pharmacy types** and **products** impact overall performance?
+The report addresses the following questions:
 
-The dashboards are designed to support **executive decision-making**, combining high-level KPIs with interactive drill-down analysis.
+- How do **revenue, units sold, and margin** change over time, and are there clear seasonal patterns?
+- Which **countries and regions** contribute the most to total revenue and margin?
+- How does performance vary when drilling down from **country → region → pharmacy**?
+- Which pharmacies **outperform or underperform** compared to others in the same region?
+- How do **Urban, Suburban, and Rural** pharmacies differ in sales volume and profitability?
+- Which **product categories and brands** generate the most revenue, and which generate the most margin?
+- Are there products with **high sales volume but low profitability**, or **low volume but high profitability**?
+- How do **promoted sales** compare to **non-promoted sales** in terms of volume and margin?
+- How does **regional performance** contribute to overall business results?
+- Are there visible **geographic patterns** in sales or profitability?
 
----
-
-## 🗂️ Dataset Overview
-
-The data model follows a **star schema**, optimized for analytical performance and scalability.
-
-### Fact Table
-- **FactSales** – daily sales transactions by pharmacy and product
-
-### Dimension Tables
-- **DimDate** – date, month, quarter, year
-- **DimPharmacy** – country, region, city, pharmacy type
-- **DimProduct** – product attributes
-
-*# inserir imagem do modelo de dados*
+Each dashboard in the report answers a specific subset of these questions, following a clear analytical narrative.
 
 ---
 
-## 📏 DAX Measures
+## 🧠 Project Objective (Plain Language)
 
-Measures are grouped by analytical domain for clarity and maintainability.
+The main objective of this project is to help business stakeholders understand:
 
-### Revenue
-- Revenue (€)
-- Revenue MoM
-- Revenue MoM %
+- **How the business is performing overall**
+- **Where sales and profitability come from**
+- **Which markets, products, and pharmacies drive results**
+- **Where performance differs despite similar contexts**
+- **How commercial decisions (such as promotions) impact results**
 
-### Units
-- Units Sold
-- Units Sold MoM
-- Units Sold MoM %
-
-### Margin
-- Margin (€)
-- Margin MoM
-- Margin MoM %
+To achieve this, the report is structured into **three dashboards**, progressing from a high-level overview to detailed, local-level analysis.
 
 ---
 
-## 🧭 Dashboard Structure
+## 🗂️ Data Overview
 
-### 📝 Page 1: Business Performance Overview
+The dataset contains **daily sales transactions** across multiple pharmacies and products.  
+Each transaction includes information about:
 
-This dashboard provides an **executive-level overview** of overall business performance.
+- Date of sale
+- Pharmacy and geographic location
+- Pharmacy type (Urban, Suburban, Rural)
+- Product, category, and brand
+- Revenue, units sold, and margin
 
-#### KPIs
-- **Revenue (€)** – total revenue with monthly sparkline
-- **Units Sold** – total units sold with monthly sparkline
-- **Margin (€)** – total margin with monthly sparkline
+The data model follows a **star schema**, which is a standard and efficient structure for analytical reporting.
 
-Sparklines are used to convey trend direction without duplicating detailed time-series visuals.
+---
 
-#### Key Insights
+## 📐 Key Metrics Explained
 
-**Countries with the Highest Units Sold**
-- Identifies markets with the largest sales volume
-- Highlights demand distribution independently of pricing or margin
+The report focuses on three core business metrics that are easy to interpret:
 
-**Countries and Regions Contributing Most to Revenue and Margin**
-- Compares absolute revenue versus profitability
-- Enables drill-down from country to region
-- Supports identification of high-revenue but low-margin markets
+- **Revenue (€)**  
+  Represents sales scale and market size.
 
-#### Interactive Filters
-- Year
-- Pharmacy Type
-- Product Name
+- **Units Sold**  
+  Represents demand and sales volume.
 
-This page answers the briefing questions related to:
+- **Margin (€ and %)**  
+  Represents profitability:
+  - Margin (€) shows total profit contribution.
+  - Margin (%) shows efficiency, allowing fair comparisons between markets of different sizes.
+
+> Instead of using a generic “profit” metric, margin is used to clearly separate **scale** from **efficiency**, which is critical for meaningful comparisons across countries, regions, and pharmacies.
+
+---
+
+## 🧭 Dashboard Structure & Purpose
+
+### 🟦 Dashboard 1 — Business Performance Overview
+
+**Purpose:**  
+Provide an executive-level snapshot of overall business performance.
+
+**What it shows:**
+- Total revenue, units sold, and margin
+- Performance trends over time
+- Comparison between countries and regions
+- Identification of high-volume vs high-profitability markets
+- Year comparison (2024 vs 2025)
+
+**Stakeholder questions answered:**
 - Overall performance trends
-- Country-level contribution
-- Volume vs. profitability comparison
+- Country and region contribution
+- Volume vs profitability at a macro level
 
 ---
 
-### 📝 Page 2: Product Performance (Planned)
+### 🟨 Dashboard 2 — Product & Category Performance
 
-This dashboard will focus on:
-- Performance by **product category and brand**
-- Comparison between **high-volume vs. high-margin products**
-- Identification of products that may require pricing or promotion review
+**Purpose:**  
+Understand how products, brands, and categories perform.
 
----
+**What it shows:**
+- Revenue and margin by product category
+- Most profitable categories and brands
+- A scatter plot comparing:
+  - Units sold (volume)
+  - Margin % (profitability)
+- Drill-down from **category → brand → product**
 
-### 📝 Page 3: Pharmacy & Regional Insights (Planned)
+This visual approach highlights:
+- Products that sell a lot but generate low margin
+- Products that sell less but are highly profitable
 
-This dashboard will focus on:
-- Performance at **pharmacy level**
-- Comparison between pharmacies within the same region
-- Differences across **Urban, Suburban, and Rural** pharmacy types
-- Geographic patterns in sales and profitability
-
----
-
-## 🧠 Design Principles
-
-- Clear separation between **overview and deep-dive analysis**
-- Avoidance of redundant visuals
-- Drill-down used instead of overcrowded charts
-- Focus on business questions defined in the original briefing
+**Stakeholder questions answered:**
+- Best-performing categories and brands
+- High-volume vs high-margin trade-offs
+- Pricing and portfolio optimization opportunities
 
 ---
 
-## 🚀 Tools & Technologies
+### 🟩 Dashboard 3 — Pharmacy & Regional Insights
 
-- Power BI Desktop
-- DAX
+**Purpose:**  
+Analyze performance at a local and operational level.
+
+**What it shows:**
+- Sales and profitability by country, region, and pharmacy
+- Performance differences within the same country
+- Comparison between Urban, Suburban, and Rural pharmacies
+- Geographic patterns using an interactive map
+- Comparison between promoted and non-promoted sales
+
+**Stakeholder questions answered:**
+- Regional contribution to overall results
+- Identification of outperforming and underperforming pharmacies
+- Impact of pharmacy type on performance
+- Impact of promotions on volume and profitability
+- Geographic performance patterns
+
+---
+
+## 🧩 Interactivity & Usability
+
+The report is designed to be **interactive and intuitive**, allowing users to:
+
+- Filter by year, country, pharmacy type, and product
+- Drill down from high-level views to detailed insights
+- Explore data without requiring technical knowledge
+
+This ensures the report supports **exploration, storytelling, and decision-making**.
+
+---
+
+## 🛠️ Tools & Technologies
+
+- **Power BI Desktop**
+- **DAX (Data Analysis Expressions)**
 - Star schema data modeling
-- Interactive and drill-down visuals
+- Interactive visuals with drill-down
+- ZoomCharts Drill Down visuals
 
 ---
 
-## 📌 Notes
+## 🎯 Why This Project Matters
 
-This project is part of a **Power BI analytics portfolio**, demonstrating the ability to translate a business briefing into a structured, scalable, and decision-oriented dashboard solution.
+This project demonstrates the ability to:
+
+- Translate a business briefing into a structured analytics solution
+- Design dashboards that are both **informative and accessible**
+- Balance technical accuracy with business clarity
+- Communicate insights effectively to non-technical audiences
+
+It showcases **end-to-end analytical thinking**, from data modeling to insight delivery, and is intended as part of a professional analytics portfolio.
