@@ -33,7 +33,7 @@ The data model follows a **star schema**, which is a standard and efficient stru
 
 <div align="center">
   <img 
-    src="https://github.com/user-attachments/assets/77cab589-f504-41f9-988a-b3042820affa" 
+    src="https://github.com/user-attachments/assets/faf99928-f4f3-4cda-997a-8e597d5fe197" 
     alt="Power BI Data Model - Star Schema"
     width="500"
   />
@@ -41,6 +41,7 @@ The data model follows a **star schema**, which is a standard and efficient stru
   <br/>
   <sub><em>Power BI Data Model – Star Schema</em></sub>
 </div>
+
 
 ---
 
@@ -72,7 +73,7 @@ All metrics used in the report are implemented as **custom DAX measures**, ensur
 
 ### 🟦 Dashboard 1 - Business Performance Overview
 
-<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/0f8c589a-544b-4046-a234-6b24cb4f3bf1" />
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/87196963-35cf-4244-8306-35e60abbaf96" />
 
 ### 🎯 Purpose
 Provide an executive-level snapshot of overall business performance.
@@ -95,7 +96,7 @@ Provide an executive-level snapshot of overall business performance.
 
 ### 🟨 Dashboard 2 - Product & Category Performance
 
-<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/be9e7788-111a-47e0-b3fd-206721a159fc" />
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/f32db3b6-d305-49ba-b4b1-75d69f45bb2e" />
 
 ### 🎯 Purpose
 Understand how product categories, brands, and individual products drive revenue and profitability.
@@ -116,9 +117,9 @@ Understand how product categories, brands, and individual products drive revenue
 - Several products outperform expected margins for their sales volume, indicating strong pricing or cost control practices.
 - High-volume, low-margin products represent clear candidates for pricing, promotion, or cost optimization reviews.
 
-### 🟩 Dashboard 3 - Pharmacy & Regional Insights
+### 🟩 Dashboard 3 - Pharmacy & Regional Deep Dive
 
-<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/3d2787f3-d351-42a5-b34d-c86b502a1e21" />
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/827ebc4e-0405-4ef3-acc0-b8e65260550d" />
 
 ### 🎯 Purpose
 Analyze performance at a geographic and operational level, from country down to individual pharmacies.
