@@ -1,19 +1,10 @@
-# Pharmacy Sales & Profitability Analytics  
-📊 Power BI Portfolio Project
+# Pharmacy Sales & Profitability Analytics
 
 This project is part of my **data analytics portfolio** and was developed using **Power BI** in response to a *Pharmacy Sales & Profitability Analytics Data Challenge*.
 
-The dataset represents a **European pharmacy distributor operating across multiple countries**, with daily sales transactions by pharmacy and product.  
-The goal of the project is to demonstrate how data can be transformed into **clear, actionable insights** that support business decision-making — even for users without a technical or analytics background.
-
 ---
 
-## 🧩 Stakeholder Questions (From the Original Briefing)
-
-The dashboards were designed to answer a specific set of **business questions defined in the original challenge briefing**.  
-These questions reflect the type of information stakeholders typically need to make informed decisions.
-
-The report addresses the following questions:
+## 🧩 Stakeholder Questions
 
 - How do **revenue, units sold, and margin** change over time, and are there clear seasonal patterns?
 - Which **countries and regions** contribute the most to total revenue and margin?
@@ -26,28 +17,11 @@ The report addresses the following questions:
 - How does **regional performance** contribute to overall business results?
 - Are there visible **geographic patterns** in sales or profitability?
 
-Each dashboard in the report answers a specific subset of these questions, following a clear analytical narrative.
-
----
-
-## 🧠 Project Objective (Plain Language)
-
-The main objective of this project is to help business stakeholders understand:
-
-- **How the business is performing overall**
-- **Where sales and profitability come from**
-- **Which markets, products, and pharmacies drive results**
-- **Where performance differs despite similar contexts**
-- **How commercial decisions (such as promotions) impact results**
-
-To achieve this, the report is structured into **three dashboards**, progressing from a high-level overview to detailed, local-level analysis.
-
 ---
 
 ## 🗂️ Data Overview
-
-The dataset contains **daily sales transactions** across multiple pharmacies and products.  
-Each transaction includes information about:
+  
+The dataset includes information about:
 
 - Date of sale
 - Pharmacy and geographic location
@@ -57,122 +31,111 @@ Each transaction includes information about:
 
 The data model follows a **star schema**, which is a standard and efficient structure for analytical reporting.
 
+<div align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/77cab589-f504-41f9-988a-b3042820affa" 
+    alt="Power BI Data Model - Star Schema"
+    width="500"
+  />
+  
+  <br/>
+  <sub><em>Power BI Data Model – Star Schema</em></sub>
+</div>
+
 ---
 
-## 📐 Key Metrics Explained
+## 🔑 Key Metrics Explained
 
-The report focuses on three core business metrics that are easy to interpret:
+The report focuses on a small set of core business metrics designed to be intuitive, comparable, and decision-oriented:
 
 - **Revenue (€)**  
-  Represents sales scale and market size.
+  Represents sales scale and overall market size.
 
 - **Units Sold**  
   Represents demand and sales volume.
 
 - **Margin (€ and %)**  
   Represents profitability:
-  - Margin (€) shows total profit contribution.
-  - Margin (%) shows efficiency, allowing fair comparisons between markets of different sizes.
+  - **Margin (€)** shows total profit contribution.
+  - **Margin (%)** measures operational efficiency, enabling fair comparisons between markets of different sizes.
 
-> Instead of using a generic “profit” metric, margin is used to clearly separate **scale** from **efficiency**, which is critical for meaningful comparisons across countries, regions, and pharmacies.
+- **MoM and YoY (%)**  
+  Represent time intelligence metrics calculated using a dedicated date dimension, following best practices in analytical data modeling.
+
+> Instead of using a generic *profit* metric, margin is intentionally used to clearly separate **scale** (revenue) from **efficiency** (margin %), which is critical for meaningful comparisons across countries, regions, and pharmacies.
+
+All metrics used in the report are implemented as **custom DAX measures**, ensuring consistency across dashboards and drill-down levels.
 
 ---
 
-## 🧭 Dashboard Structure & Purpose
+## 🧭 Report Structure
 
-### 🟦 Dashboard 1 — Business Performance Overview
+### 🟦 Dashboard 1 - Business Performance Overview
 
-**Purpose:**  
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/0f8c589a-544b-4046-a234-6b24cb4f3bf1" />
+
+### 🎯 Purpose
 Provide an executive-level snapshot of overall business performance.
 
-**What it shows:**
-- Total revenue, units sold, and margin
-- Performance trends over time
-- Comparison between countries and regions
-- Identification of high-volume vs high-profitability markets
-- Year comparison (2024 vs 2025)
+### 📊 What it shows
+- **Total revenue, units sold, and margin**
+- **Performance trends over time**
+- **Comparison between countries and regions**
+- **Identification of high-volume vs high-profitability markets**
+- **Year-over-year comparison (2024 vs 2025)**
 
-**Stakeholder questions answered:**
-- Overall performance trends
-- Country and region contribution
-- Volume vs profitability at a macro level
+### 🔍 Key Insights
+- The business shows a stable upward trend in revenue, units sold, and margin over time, with no major structural downturns.
+- Germany, France, and Italy lead in units sold, indicating the highest demand concentration across markets.
+- Revenue and margin contribution is not proportional to sales volume, as some lower-volume countries generate relatively higher margins (e.g. Poland vs Austria in 2025).
+- This confirms that sales scale alone does not guarantee profitability, reinforcing the need to evaluate volume and margin together.
+- The 2024 vs 2025 comparison helps validate whether growth is structural rather than driven by short-term effects.
 
 ---
 
-### 🟨 Dashboard 2 — Product & Category Performance
+### 🟨 Dashboard 2 - Product & Category Performance
 
-**Purpose:**  
-Understand how products, brands, and categories perform.
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/be9e7788-111a-47e0-b3fd-206721a159fc" />
 
-**What it shows:**
-- Revenue and margin by product category
-- Most profitable categories and brands
-- A scatter plot comparing:
-  - Units sold (volume)
+### 🎯 Purpose
+Understand how product categories, brands, and individual products drive revenue and profitability.
+
+### 📊 What it shows
+- 💰 Revenue and margin by product category  
+- 📈 Identification of the most profitable categories  
+- 🔍 Product-level analysis combining:
+  - Units Sold (sales volume)
   - Margin % (profitability)
-- Drill-down from **category → brand → product**
+- 🧭 Scatter plot highlighting volume vs profitability trade-offs  
+- 🔽 Drill-down from **Category → Brand → Product**
 
-This visual approach highlights:
-- Products that sell a lot but generate low margin
-- Products that sell less but are highly profitable
+### 🔍 Key Insights
+- Prescription and OTC categories generate the highest absolute revenue, forming the volume backbone of the business.
+- Wellness and Personal Care stand out as the most profitable categories in terms of margin percentage, despite lower sales volumes.
+- The volume vs profitability analysis confirms that higher sales volume does not necessarily translate into higher margin.
+- Several products outperform expected margins for their sales volume, indicating strong pricing or cost control practices.
+- High-volume, low-margin products represent clear candidates for pricing, promotion, or cost optimization reviews.
 
-**Stakeholder questions answered:**
-- Best-performing categories and brands
-- High-volume vs high-margin trade-offs
-- Pricing and portfolio optimization opportunities
+### 🟩 Dashboard 3 - Pharmacy & Regional Insights
 
----
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/3d2787f3-d351-42a5-b34d-c86b502a1e21" />
 
-### 🟩 Dashboard 3 — Pharmacy & Regional Insights
+### 🎯 Purpose
+Analyze performance at a geographic and operational level, from country down to individual pharmacies.
 
-**Purpose:**  
-Analyze performance at a local and operational level.
+### 📊 What it shows
+- 🌍 Revenue and margin by country, region, and pharmacy  
+- 📉 Performance variation within the same country  
+- 🏙️ Comparison across **Urban, Suburban, and Rural** pharmacy types  
+- 🗺️ Geographic distribution of performance using an interactive map  
+- 🎯 Comparison between **Promoted vs Non-Promoted** sales (volume vs margin)  
+- 🔽 Drill-down from **Country → Region → Pharmacy**
 
-**What it shows:**
-- Sales and profitability by country, region, and pharmacy
-- Performance differences within the same country
-- Comparison between Urban, Suburban, and Rural pharmacies
-- Geographic patterns using an interactive map
-- Comparison between promoted and non-promoted sales
-
-**Stakeholder questions answered:**
-- Regional contribution to overall results
-- Identification of outperforming and underperforming pharmacies
-- Impact of pharmacy type on performance
-- Impact of promotions on volume and profitability
-- Geographic performance patterns
-
----
-
-## 🧩 Interactivity & Usability
-
-The report is designed to be **interactive and intuitive**, allowing users to:
-
-- Filter by year, country, pharmacy type, and product
-- Drill down from high-level views to detailed insights
-- Explore data without requiring technical knowledge
-
-This ensures the report supports **exploration, storytelling, and decision-making**.
+### 🔍 Key Insights
+- Significant performance disparities exist within the same country, both in revenue generation and margin contribution.
+- Pharmacies with similar revenue levels can achieve very different margins, highlighting operational efficiency differences.
+- Urban pharmacies concentrate higher sales volume and revenue, while Suburban and Rural pharmacies can achieve comparable or higher margins.
+- Promotions increase sales volume but reduce average margin, requiring careful evaluation and control.
+- High-performing regions and pharmacies provide strong internal benchmarks for network-wide optimization.
 
 ---
-
-## 🛠️ Tools & Technologies
-
-- **Power BI Desktop**
-- **DAX (Data Analysis Expressions)**
-- Star schema data modeling
-- Interactive visuals with drill-down
-- ZoomCharts Drill Down visuals
-
----
-
-## 🎯 Why This Project Matters
-
-This project demonstrates the ability to:
-
-- Translate a business briefing into a structured analytics solution
-- Design dashboards that are both **informative and accessible**
-- Balance technical accuracy with business clarity
-- Communicate insights effectively to non-technical audiences
-
-It showcases **end-to-end analytical thinking**, from data modeling to insight delivery, and is intended as part of a professional analytics portfolio.
