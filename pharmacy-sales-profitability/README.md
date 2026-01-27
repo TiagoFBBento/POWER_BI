@@ -135,7 +135,7 @@ Analyze performance at a geographic and operational level, from country down to 
 - Significant performance disparities exist within the same country, both in revenue generation and margin contribution.
 - Pharmacies with similar revenue levels can achieve very different margins, highlighting operational efficiency differences.
 - Urban pharmacies concentrate higher sales volume and revenue, while Suburban and Rural pharmacies can achieve comparable or higher margins.
-- Promotions increase sales volume but reduce average margin, requiring careful evaluation and control.
+- Promotions do not increase sales volume, requiring careful evaluation and control.
 - High-performing regions and pharmacies provide strong internal benchmarks for network-wide optimization.
 
 ---
