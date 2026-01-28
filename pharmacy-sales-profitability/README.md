@@ -2,6 +2,9 @@
 
 This project is part of my **data analytics portfolio** and was developed using **Power BI** in response to a *Pharmacy Sales & Profitability Analytics Data Challenge*.
 
+Report:
+> https://app.powerbi.com/view?r=eyJrIjoiNTQyMzViYzItN2FiMy00ZmM2LTkzYTQtMjFlZDE0Y2Y0YmQ2IiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9
+
 ---
 
 ## 🧠 Project Objective
