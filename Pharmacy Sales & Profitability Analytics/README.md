@@ -9,7 +9,9 @@ Report:
 
 ## 🧠 Project Objective
 
-The objective of this project is to support business stakeholders in gaining a clear and integrated understanding of the company’s overall performance, enabling them to assess sales and profitability trends, identify the main sources of results, and understand which markets, products, and pharmacies drive performance. It also aims to highlight performance differences across similar contexts and to analyze the impact of commercial decisions, such as promotional activities, on business outcomes. To address these objectives, the report is designed with a progressive structure, consisting of three dashboards that guide users from a high-level strategic overview of the business to a detailed analysis at the local level.
+The objective of this project is to support business stakeholders in gaining a clear and integrated understanding of the company’s overall performance, enabling them to assess sales and profitability trends, identify the main sources of results, and understand which markets, products, and pharmacies drive performance. 
+
+It also aims to highlight performance differences across similar contexts and to analyze the impact of commercial decisions, such as promotional activities, on business outcomes. To address these objectives, the report is designed with a progressive structure, consisting of three dashboards that guide users from a high-level strategic overview of the business to a detailed analysis at the local level.
 
 ---
 
