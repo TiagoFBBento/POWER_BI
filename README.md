@@ -1,5 +1,3 @@
-# Power BI Portfolio
-
 ## 📊 Projects
 
 1️⃣ Athlete Health & Injury Analytics  
