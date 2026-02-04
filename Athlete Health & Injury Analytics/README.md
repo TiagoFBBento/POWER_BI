@@ -41,6 +41,18 @@ The dataset includes information about:
 - Recovery duration and days lost  
 - Team, coach, or regional context (when available)
 
+<div align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/cad425e0-8e00-4668-bf3a-d2aa2dcd73ba"
+    alt="Power BI Data Model - Star Schema"
+    width="500"
+  />
+  
+  <br/>
+  <sub><em>Power BI Data Model – Star Schema</em></sub>
+</div>
+
+
 The data model follows a **star schema**, which is a standard and efficient structure for analytical reporting and time-based analysis.
 
 ---
