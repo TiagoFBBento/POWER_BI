@@ -1,4 +1,4 @@
-# Athlete Health & Injury Analytics
+# 1️⃣ Athlete Health & Injury Analytics
 
 This project is part of my **data analytics portfolio** and was developed using Power BI in response to a *Athlete Health & Injury Analytics Data Challenge*.
 
