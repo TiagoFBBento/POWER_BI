@@ -53,7 +53,6 @@ The data model follows a **star schema**, which is a standard and efficient stru
   <sub><em>Power BI Data Model – Star Schema</em></sub>
 </div>
 
-
 ---
 
 ## 🔑 Key Metrics Explained
